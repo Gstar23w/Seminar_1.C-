@@ -3,27 +3,25 @@
 // 23432 -> да
 // 12821 -> да
 
+Console.WriteLine ("Введите пятизначное значное число: ");
+string number = Console.ReadLine();
+int len = number.Length;
+if (len == 5)
+{
+    if (number[0] == number[4] && number [1] == number[3])
+    {
+        Console.WriteLine(number + " Палиндром");
+    }
 
-
-Console.Write("Введите число: ");
-string? number = Console.ReadLine();
-
-void CheckingNumber(string number){
-
-  if (number[0]==number[4] || number[1]==number[3]){
-
-    Console.WriteLine($"Ваше число: {number} - палиндром.");
-
-  }
-
-  else Console.WriteLine($"Ваше число: {number} - НЕ палиндром.");
-
+    else
+    {
+        Console.WriteLine(number + " Не палиндром");
+    }
+}
+else
+{
+    Console.WriteLine ("Вы ввели не пятизначное значное число");
 }
 
-if (number!.Length == 5){
 
-  CheckingNumber(number);
 
-}
-
-else Console.WriteLine($"Введите правильное число");
